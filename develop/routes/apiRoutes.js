@@ -9,9 +9,9 @@ module.exports = (app) => {
     });
 
     app.post('/api/notes', function (req, res) {
-        id = uuidv4();
-        console.log(id)
-        console.log(notes);
+        data = req.body
+        data.id = uuidv4()
+        console.log(data);
         notes.push(req.body);
         res.json(true);
     })
